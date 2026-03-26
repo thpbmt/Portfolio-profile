@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Phuoc Tran Portfolio</title>
+    <title>Tran Hoang Phuoc - Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
@@ -15,8 +15,6 @@
     <canvas id="particles"></canvas>
 
     <div class="content">
-
-        <!-- NAV -->
         <nav class="fixed w-full top-0 z-50 glass px-10 py-4 flex justify-between items-center">
             <h1 class="text-xl font-bold">Hi! I'm Trần Hoàng Phước</h1>
             <div class="space-x-6">
@@ -26,28 +24,18 @@
                 <a href="#contact" class="nav-link">Contact</a>
             </div>
         </nav>
-
-        <!-- HERO -->
         <section id="home" class="h-screen flex flex-col justify-center items-center text-center px-6 reveal">
 
-            <!-- Avatar -->
             <img src="images/Ảnh áo sơ mi.jpeg" alt="avatar"
                 class="w-36 h-36 rounded-full mb-6 border-4 border-white shadow-xl hover:scale-105 transition">
-
-            <!-- Name (typing effect) -->
             <h1 id="typing-name" class="text-4xl font-bold mb-2"></h1>
-
-            <!-- Role (typing effect) -->
             <h2 id="typing-role" class="text-2xl mb-4 text-blue-300"></h2>
-
             <p class="max-w-xl text-gray-200">Java - JavaScript - VueJs - NodeJs</p>
         </section>
 
-        <!-- ABOUT -->
         <section id="about" class="py-20 px-6 reveal">
             <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10">
 
-                <!-- LEFT: INTRO -->
                 <div class="glass p-8 rounded-2xl shadow-xl card">
                     <h2 class="text-3xl font-bold mb-4"> About Me</h2>
                     <p class="text-gray-200 leading-relaxed mb-4">
@@ -63,11 +51,8 @@
                         cận công nghệ mới. Hiện đang tìm kiếm cơ hội thực tập để phát triển chuyên môn.
                     </p>
                 </div>
-
-                <!-- RIGHT: EDUCATION + SKILLS -->
                 <div class="space-y-6">
 
-                    <!-- EDUCATION -->
                     <div class="glass p-6 rounded-2xl shadow-xl card">
                         <h3 class="text-xl font-semibold mb-3"> Education</h3>
                         <p><b>FPT Polytechnic</b> (2025 – 2026)</p>
@@ -75,42 +60,30 @@
                         <p class="text-blue-300">GPA hiện tại: 3.58 / 4.0</p>
                     </div>
 
-                    <!-- SKILLS -->
                     <div class="glass p-6 rounded-2xl shadow-xl card">
                         <h3 class="text-xl font-semibold mb-3"> Skills</h3>
-
                         <div class="mb-3">
                             <p class="text-blue-300">Ngôn ngữ:</p>
                             <p class="text-gray-200">Java, JavaScript</p>
                         </div>
-
                         <div class="mb-3">
                             <p class="text-blue-300">Web:</p>
                             <p class="text-gray-200">HTML, CSS</p>
                         </div>
-
                         <div class="mb-3">
                             <p class="text-blue-300">Framework:</p>
                             <p class="text-gray-200">VueJS, NodeJS (cơ bản), Tomcat</p>
                         </div>
-
                         <div>
                             <p class="text-blue-300">Tools:</p>
                             <p class="text-gray-200">Git, GitHub, NetBeans</p>
                         </div>
-
                     </div>
-
                 </div>
-
             </div>
-
-            <!-- PROJECT EXPERIENCE -->
             <div class="max-w-6xl mx-auto mt-16">
                 <h2 class="text-3xl font-bold text-center mb-10"> Experience / Projects</h2>
-
                 <div class="grid md:grid-cols-2 gap-8">
-
                     <div class="glass p-6 rounded-2xl shadow-xl card">
                         <h3 class="text-xl font-semibold mb-2"> Quản Lý Nhà Sách</h3>
                         <p class="text-blue-300 mb-2">Fullstack Developer • Team Leader</p>
@@ -120,7 +93,6 @@
                             <li>Top 3 dự án tốt nghiệp</li>
                         </ul>
                     </div>
-
                     <div class="glass p-6 rounded-2xl shadow-xl card">
                         <h3 class="text-xl font-semibold mb-2"> Quản Lý Bệnh Viện</h3>
                         <p class="text-blue-300 mb-2">Fullstack Developer (Solo)</p>
@@ -130,32 +102,46 @@
                             <li>Đạt 9.5 điểm</li>
                         </ul>
                     </div>
+                    <div class="glass p-6 rounded-2xl shadow-xl card">
+                        <h3 class="text-xl font-semibold mb-2"> Game Flappy Ball</h3>
+                        <p class="text-blue-300 mb-2">Fullstack Developer • Team Leader</p>
+                        <ul class="text-gray-200 list-disc pl-5 space-y-1">
+                            <li>Lấy cảm hứng từ game Flappy Bird</li>
+                            <li>Xây dựng logic, xử lý va chạm và tương tác người chơi</li>
+                            <li>Phát triển bằng JavaScript, HTML, CSS</li>
+                        </ul>
+                    </div>
 
                 </div>
             </div>
 
         </section>
 
-        <!-- PROJECT -->
         <section id="projects" class="py-20 px-10 reveal">
             <h2 class="text-3xl font-bold text-center mb-10">Projects</h2>
 
             <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-
-                <div class="glass p-6 rounded-2xl shadow-xl card">
-                    <h3 class="text-xl font-semibold mb-2">Book Store Manager</h3>
-                    <p class="text-gray-300">Java Swing Application</p>
-                </div>
-
-                <div class="glass p-6 rounded-2xl shadow-xl card">
-                    <h3 class="text-xl font-semibold mb-2">Hospital Management</h3>
-                    <p class="text-gray-300">Java Web (Servlet, JSP)</p>
-                </div>
-
+                <a href="BookStoreManagement_detail.html">
+                    <div class="glass p-6 rounded-2xl shadow-xl card">
+                        <h3 class="text-xl font-semibold mb-2">Book Store Manager</h3>
+                        <p class="text-gray-300">Java Swing Application</p>
+                    </div>
+                </a>
+                <a href="HospitalManagement_detail.html">
+                    <div class="glass p-6 rounded-2xl shadow-xl card">
+                        <h3 class="text-xl font-semibold mb-2">Hospital Management</h3>
+                        <p class="text-gray-300">Java Web (Servlet, JSP)</p>
+                    </div>
+                </a>
+                <a href="FlappyBall_detail.html">
+                    <div class="glass p-6 rounded-2xl shadow-xl card">
+                        <h3 class="text-xl font-semibold mb-2">Flappy Ball</h3>
+                        <p class="text-gray-300">JavaScript Game</p>
+                    </div>
+                </a>
             </div>
         </section>
 
-        <!-- CONTACT -->
         <section id="contact" class="py-20 px-10 text-center reveal">
             <h2 class="text-3xl font-bold mb-6">Contact</h2>
             <p>Email: phuocthts01975@gmail.com</p>

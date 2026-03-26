@@ -37,7 +37,6 @@ function animate() {
 }
 animate();
 
-// SCROLL REVEAL
 function reveal() {
   const reveals = document.querySelectorAll(".reveal");
 
@@ -54,7 +53,6 @@ function reveal() {
 window.addEventListener("scroll", reveal);
 reveal();
 
-// TYPING EFFECT
 const nameText = "Trần Hoàng Phước";
 const roleText = "Java Backend Developer (intern)";
 
@@ -81,7 +79,6 @@ function typeRole() {
 
 typeName();
 
-// RESIZE
 window.addEventListener("resize", () => {
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;

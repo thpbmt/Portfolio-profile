@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Store Manager</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+
+    /* Slider */
+    .slider {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .slides {
+      display: flex;
+      transition: transform 0.6s ease;
+    }
+
+    .slide {
+      min-width: 100%;
+    }
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      background: #64748b;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    .dot.active {
+      background: #3b82f6;
+    }
+    body {
+  font-family: 'Poppins', sans-serif;
+  background: #0f172a;
+  overflow-x: hidden;
+}
+
+/* Gradient animation */
+.bg-animated {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(
+    120deg,
+    #0f172a,
+    #1e293b,
+    #1e3a8a,
+    #0ea5e9
+  );
+  background-size: 300% 300%;
+  animation: gradientMove 15s ease infinite;
+}
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes float {
+  0%,100% { transform: translateY(0px) translateX(0px); }
+  50% { transform: translateY(-40px) translateX(30px); }
+}
+  </style>
+</head>
+<body class="text-white">
+<div class="bg-animated"></div>
+
+<div class="max-w-5xl mx-auto px-6 py-10">
+  <a href="index.html" class="text-blue-400 hover:underline">← Back</a>
+  <div class="mt-6 mb-10">
+    <h1 class="text-4xl font-bold mb-3"> Ứng dụng Quản lý Nhà sách</h1>
+    <p class="text-gray-400 max-w-xl">
+      Ứng dụng quản lý nhà sách bằng Java Swing, quản lý sách, bán hàng.
+    </p>
+    <div class="flex gap-3 mt-4">
+      <span class="px-3 py-1 bg-blue-500/20 rounded-full text-sm">Java</span>
+      <span class="px-3 py-1 bg-blue-500/20 rounded-full text-sm">Swing</span>
+    </div>
+
+  </div>
+  <div>
+    <div class="slider rounded-xl">
+      <div class="slides" id="slides">
+        <img src="images/sach1.png" class="slide rounded-xl">
+        <img src="images/sach2.png" class="slide rounded-xl">
+        <img src="images/sach3.png" class="slide rounded-xl">
+        <img src="images/sach4.png" class="slide rounded-xl">
+      </div>
+    </div>
+
+    <div class="flex justify-center gap-3 mt-4">
+      <div class="dot active" onclick="goToSlide(0)"></div>
+      <div class="dot" onclick="goToSlide(1)"></div>
+      <div class="dot" onclick="goToSlide(2)"></div>
+      <div class="dot" onclick="goToSlide(3)"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+  let index = 0;
+  const slides = document.getElementById("slides");
+  const dots = document.querySelectorAll(".dot");
+
+  function showSlide(i) {
+    index = i;
+    slides.style.transform = `translateX(-${i * 100}%)`;
+
+    dots.forEach(dot => dot.classList.remove("active"));
+    dots[i].classList.add("active");
+  }
+
+  function goToSlide(i) {
+    showSlide(i);
+  }
+
+  setInterval(() => {
+    index = (index + 1) % dots.length;
+    showSlide(index);
+  }, 3000);
+</script>
+
+</body>
+</html>
